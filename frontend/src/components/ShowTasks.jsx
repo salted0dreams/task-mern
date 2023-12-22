@@ -11,7 +11,7 @@ export function ShowTasks() {
     const [update, setUpdate] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/task").then((response) => {
+        axios.get("https://task-api-iq60.onrender.com/api/task").then((response) => {
             setTasks(response.data.data);
         })
         .catch((error) => {
@@ -38,7 +38,7 @@ export function ShowTasks() {
     }
 
     function handleDelete(e) {
-        axios.delete(`http://localhost:5000/api/task/${e.target.name}`);
+        axios.delete(`https://task-api-iq60.onrender.com/api/task/${e.target.name}`);
         setTasks((data) => {
             return data.filter((task) => task._id !== e.target.name);
         });

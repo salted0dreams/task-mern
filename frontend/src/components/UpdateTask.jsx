@@ -14,7 +14,7 @@ export function UpdateTask({ _id, handleClose, handleEdited }) {
         console.log({ _id }, { data });
 
         axios
-            .put(`http://localhost:5000/api/task/${_id}`, data)
+            .put(`https://task-api-iq60.onrender.com/api/task/${_id}`, data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);

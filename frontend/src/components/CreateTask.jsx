@@ -22,7 +22,7 @@ export function  CreateTask() {
 
         console.log({ task });
         axios
-            .post("http://localhost:5000/api/task", data)
+            .post("https://task-api-iq60.onrender.com/api/task", data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
